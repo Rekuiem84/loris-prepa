@@ -2,25 +2,25 @@
 	font-family: "Unison";
 	font-style: normal;
 	font-weight: 700;
-	src: url("/fonts/unison-pro/\ Unison\ Pro\ Bold\.otf");
+	src: url("/fonts/unison-pro/Unison Pro Bold.otf");
 }
 @font-face {
 	font-family: "Unison";
 	font-style: italic;
 	font-weight: 700;
-	src: url("/fonts/unison-pro/\ Unison\ Pro\ Bold\ Italic.otf");
+	src: url("/fonts/unison-pro/Unison Pro Bold Italic.otf");
 }
 @font-face {
 	font-family: "Unison";
 	font-style: normal;
 	font-weight: 200;
-	src: url("/fonts/unison-pro/\ Unison\ Pro\ Light.otf");
+	src: url("/fonts/unison-pro/Unison Pro Light.otf");
 }
 @font-face {
 	font-family: "Unison";
 	font-style: italic;
 	font-weight: 700;
-	src: url("/fonts/unison-pro/\ Unison\ Pro\ Light\ Italic.otf");
+	src: url("/fonts/unison-pro/Unison Pro Light Italic.otf");
 }
 
 :root {
