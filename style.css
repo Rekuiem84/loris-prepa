@@ -1,0 +1,125 @@
+@font-face {
+	font-family: "Unison";
+	font-style: normal;
+	font-weight: 700;
+	src: url("/fonts/unison-pro/\ Unison\ Pro\ Bold\.otf");
+}
+@font-face {
+	font-family: "Unison";
+	font-style: italic;
+	font-weight: 700;
+	src: url("/fonts/unison-pro/\ Unison\ Pro\ Bold\ Italic.otf");
+}
+@font-face {
+	font-family: "Unison";
+	font-style: normal;
+	font-weight: 200;
+	src: url("/fonts/unison-pro/\ Unison\ Pro\ Light.otf");
+}
+@font-face {
+	font-family: "Unison";
+	font-style: italic;
+	font-weight: 700;
+	src: url("/fonts/unison-pro/\ Unison\ Pro\ Light\ Italic.otf");
+}
+
+:root {
+	--color-black: #1f1f21;
+	--color-white: #fffaff;
+	--color-accent: #022cd7;
+
+	--font-size-text: 18px;
+	--font-size-small: 18px;
+	--font-size-medium: 18px;
+	--font-size-large: 18px;
+	--font-size-xlarge: 18px;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	color-scheme: dark;
+}
+body {
+	font-family: sans-serif;
+	background: var(--color-black);
+}
+img {
+	max-width: 100%;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+.hidden {
+	display: none;
+}
+.color-accent {
+	color: var(--color-accent);
+}
+.bg-accent {
+	background-color: var(--color-accent);
+	color: var(--color-white);
+}
+.underline {
+	text-decoration: underline;
+}
+/* Nav */
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.75rem 8vw;
+	font-family: "Montserrat";
+	font-weight: 800;
+	position: absolute;
+}
+nav .logo-cont {
+	width: 120px;
+}
+.nav__list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: var(--font-size-small);
+	gap: 3em;
+
+	& a {
+		padding: 0.6em 1em;
+	}
+	& li:last-child a {
+		padding: 0.9em 2.4em;
+		background: var(--color-accent);
+		color: var(--color-white);
+	}
+}
+/* Histoire */
+.hero-section--histoire {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 3px solid red;
+	padding: 7rem 1rem;
+	text-align: center;
+	min-height: 100vh;
+	min-height: 100dvh;
+
+	& .main-title {
+		font-size: 3rem;
+		font-family: "Unison";
+		font-weight: bold;
+	}
+	& h1 {
+		font-size: 1.5rem;
+	}
+	& .cta-button {
+		font-size: 1rem;
+	}
+}
