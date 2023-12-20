@@ -94,6 +94,9 @@ nav {
 nav .logo-cont {
 	width: 120px;
 }
+.nav--relative {
+	position: relative;
+}
 .nav__list {
 	display: flex;
 	justify-content: space-evenly;
