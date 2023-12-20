@@ -47,6 +47,7 @@
 }
 html {
 	color-scheme: dark;
+	scroll-behavior: smooth;
 }
 body {
 	font-family: sans-serif;
@@ -285,6 +286,7 @@ footer {
 .footer-main {
 	display: flex;
 	flex-wrap: wrap;
+	row-gap: 2em;
 }
 .footer-main > div {
 	flex: 1 1 200px;
@@ -301,7 +303,7 @@ footer {
 	&:nth-child(3) {
 		display: flex;
 		justify-content: right;
-		padding-bottom: 3rem;
+		padding-bottom: 5rem;
 	}
 }
 .footer-main ul li:first-child {
