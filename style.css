@@ -34,6 +34,10 @@
 	--font-size-large: 18px;
 	--font-size-xlarge: 18px;
 }
+::selection {
+	background-color: var(--color-accent);
+	color: var(--color-white);
+}
 *,
 *::before,
 *::after {
@@ -47,6 +51,8 @@ html {
 body {
 	font-family: sans-serif;
 	background: var(--color-black);
+	overflow-x: hidden;
+	font-family: "Montserrat";
 }
 img {
 	max-width: 100%;
@@ -80,6 +86,8 @@ nav {
 	font-family: "Montserrat";
 	font-weight: 800;
 	position: absolute;
+	width: 100%;
+	z-index: 10;
 }
 nav .logo-cont {
 	width: 120px;
@@ -93,6 +101,7 @@ nav .logo-cont {
 
 	& a {
 		padding: 0.6em 1em;
+		cursor: pointer;
 	}
 	& li:last-child a {
 		padding: 0.9em 2.4em;
@@ -102,24 +111,121 @@ nav .logo-cont {
 }
 /* Histoire */
 .hero-section--histoire {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border: 3px solid red;
-	padding: 7rem 1rem;
+	justify-content: center;
+	padding: 3rem 1rem;
 	text-align: center;
 	min-height: 100vh;
 	min-height: 100dvh;
 
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background-image: url(images/histoire-hero.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 30%;
+	}
+	&::after {
+		content: url(images/arrow-accent.svg);
+		position: absolute;
+		width: 50px;
+		bottom: 10vh;
+		z-index: -1;
+	}
 	& .main-title {
 		font-size: 3rem;
 		font-family: "Unison";
 		font-weight: bold;
+
+		& span {
+			transition: color 0.15s ease;
+
+			&:hover {
+				color: var(--color-accent);
+			}
+		}
 	}
 	& h1 {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
+		font-weight: 400;
+		padding: 0 15vw;
+		margin-block: 3em 5em;
 	}
 	& .cta-button {
-		font-size: 1rem;
+		font-weight: 600;
+		font-size: 1.2rem;
+		padding: 0.7em 2.5em;
+		outline: 3px solid currentColor;
+		transition: 0.2s ease;
+		&:is(:hover, :focus) {
+			outline-offset: 6px;
+		}
+	}
+}
+/* Histoire */
+.histoire .timeline {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 1.5rem;
+	font-weight: 600;
+	padding-block: 1.1em;
+}
+.histoire article {
+	background-color: #ffffff;
+	/* background-image: url(images/background-texture-2.png); */
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	color: var(--color-black);
+	padding-inline: 7vw;
+	padding-block: 2rem;
+}
+.histoire .main-cont {
+	flex: 2;
+	border: 3px solid red;
+
+	& h2 {
+		font-size: 2rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		text-align: right;
+		line-height: 1.25em;
+		padding-left: 30%;
+	}
+}
+.histoire .content-cont {
+	flex: 1;
+	text-align: right;
+	border: 3px solid red;
+
+	& .color-accent {
+		font-size: 3rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		line-height: 1em;
+
+		&:nth-child(2) {
+			margin-top: 0.2em;
+		}
+	}
+
+	& .date {
+		text-decoration: underline;
+	}
+
+	& p:nth-child(n + 3) {
+		font-size: 1.125rem;
+		font-weight: 600;
+		margin-top: 3em;
+		padding-left: 2em;
+		border: 3px solid gold;
 	}
 }
