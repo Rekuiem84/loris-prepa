@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" type="image/png" href="" />
+  <!-- <script src='' defer></script> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav class="nav--relative">
+      <div class="logo-cont">
+        <a href="index.html"><img src="images/logo.svg" alt="logo" /></a>
+      </div>
+      <ul class="nav__list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="histoire.html">Histoire</a></li>
+        <li><a href="reserver.html">Réserver</a></li>
+        <li><a href="#" class="underline">Me&nbsp;contacter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <p class="text-top">
+      ATTEIGNONS DES <span class="box-blue">SOMMETS !</span>
+    </p>
+    <form method="GET">
+      <div class="flex">
+        <div class="form-middle">
+          <label for="prenom" class="label-marg-left">Prénom</label>
+          <input type="text" name="prenom" id="prenom" placeholder="Prénom" class="label-marg-right full-input-first" />
+        </div>
+        <div class="form-middle">
+          <label for="nom">Nom</label>
+          <input type="text" name="nom" id="prenom" placeholder="Nom" class="label-marg-right full-input-scd" />
+        </div>
+      </div>
+      <div class="flex">
+        <div class="form-middle">
+          <label for="telephone" class="label-marg-left">Téléphone</label>
+          <input type="tel" name="telephone" id="telephone" placeholder="06 00 00 00 00"
+            class="label-marg-right full-input-first" />
+        </div>
+        <div class="form-middle">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="votre-mail@gmail"
+            class="label-marg-right full-input-scd" />
+        </div>
+      </div>
+      <div class="form-full flex">
+        <label for="message" class="label-marg-left">Message</label>
+        <textarea name="message" id="message" placeholder="Message" class="label-marg-right" rows="7"></textarea>
+      </div>
+      <div class="div-contact-button">
+        <a href="#"><img src="images/fb.png" alt="" /></a>
+        <a href="#"><img src="images/insta.png" alt="" /></a>
+        <button class="btn-contact">ENVOYER</button>
+        <a href="#"><img src="images/linkedin.png" alt="" /></a>
+        <a href="#"><img src="images/yt.png" alt="" /></a>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <div class="footer-main">
+      <div><img src="images/logo-loris.svg" alt="logo"></div>
+      <div><img src="images/logo.svg" alt="logo"></div>
+      <div>
+        <ul>
+          <li>Pages</li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="histoire.html">Histoire</a></li>
+          <li><a href="reserver.html">Réserver</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>© 2023 Loris. Tout droit réservés</p>
+      <p><a href="#">Mentions légales</a></p>
+      <p><a href="#">Politique de cookies</a></p>
+      <p><a href="#">RGPD</a></p>
+    </div>
+  </footer>
+</body>
+
+</html>

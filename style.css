@@ -23,6 +23,116 @@
 	src: url("/fonts/unison-pro/Unison-Pro-Light-Italic.otf");
 }
 
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 100;
+	src: url("/fonts/Montserrat/Montserrat-Thin.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 200;
+	src: url("/fonts/Montserrat/Montserrat-ExtraLight.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 300;
+	src: url("/fonts/Montserrat/Montserrat-Light.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	src: url("/fonts/Montserrat/Montserrat-Medium.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 600;
+	src: url("/fonts/Montserrat/Montserrat-SemiBold.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	src: url("/fonts/Montserrat/Montserrat-Bold.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 800;
+	src: url("/fonts/Montserrat/Montserrat-ExtraBold.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 900;
+	src: url("/fonts/Montserrat/Montserrat-Black.ttf");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: 100;
+	src: url("/fonts/Montserrat/Montserrat-ThinItalic.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: 200;
+	src: url("/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: 300;
+	src: url("/fonts/Montserrat/Montserrat-LightItalic.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: 400;
+	src: url("/fonts/Montserrat/Montserrat-Italic.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: 500;
+	src: url("/fonts/Montserrat/Montserrat-MediumItalic.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: 600;
+	src: url("/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: 700;
+	src: url("/fonts/Montserrat/Montserrat-BoldItalic.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: 800;
+	src: url("/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: 900;
+	src: url("/fonts/Montserrat/Montserrat-BlackItalic.ttf");
+}
+
 :root {
 	--color-black: #1f1f21;
 	--color-white: #fffaff;
@@ -127,6 +237,10 @@ nav .logo-cont {
 	min-height: 100vh;
 	min-height: 100dvh;
 
+	& * {
+		z-index: 1;
+	}
+
 	& .main-title {
 		font-size: 3rem;
 		font-family: "Unison", system-ui, -apple-system, BlinkMacSystemFont,
@@ -160,6 +274,13 @@ nav .logo-cont {
 		&:is(:hover, :focus-visible) {
 			outline-offset: 6px;
 		}
+	}
+	& .img-cont {
+		z-index: 0;
+		position: absolute;
+		right: 10%;
+		bottom: 0;
+		width: min(80%, 520px);
 	}
 }
 /* Histoire */
@@ -242,6 +363,12 @@ nav .logo-cont {
 		text-transform: uppercase;
 	}
 }
+.qui-suis-je video {
+	position: absolute;
+	min-width: 100%;
+	height: 100%;
+	z-index: -5;
+}
 .qui-suis-je .video-cont {
 	position: relative;
 	width: 100%;
@@ -254,13 +381,12 @@ nav .logo-cont {
 	isolation: isolate;
 
 	&::before {
-		/* content: url(); */
 		content: "";
 		position: absolute;
 		inset: 0;
 		z-index: -1;
 		background-color: var(--color-accent);
-		opacity: 0.4;
+		opacity: 0.5;
 	}
 	& .logo-cont {
 		width: 120px;
@@ -292,12 +418,13 @@ nav .logo-cont {
 		&::before {
 			content: "Pour aller plus loin";
 			position: absolute;
-			bottom: 100%;
-			right: 110%;
+			bottom: 115%;
+			left: -50%;
 			width: 110%;
 			font-size: 0.75em;
 			font-weight: 200;
 			text-transform: uppercase;
+			pointer-events: none;
 		}
 	}
 }
@@ -573,6 +700,109 @@ nav .logo-cont {
 		outline-color: var(--color-white);
 		outline-offset: 6px;
 	}
+}
+/* Contact */
+.text-top {
+	font-family: "Unison", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+	font-size: 2.22em;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+.box-blue {
+	background-color: var(--color-accent);
+	padding-left: 5px;
+	padding-right: 5px;
+}
+form {
+	border: 5px solid var(--color-white);
+	width: 88%;
+	margin-inline: auto;
+	background-color: var(--color-black);
+	opacity: 0.9;
+	margin-bottom: 60px;
+}
+.flex {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
+}
+.form-middle {
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+}
+.form-full {
+	margin-bottom: 60px;
+}
+.div-contact-button {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+label {
+	font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+	font-size: 1.3em;
+	font-weight: 900;
+}
+input {
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	border-bottom: 1px solid white;
+	background-color: var(--color-black);
+}
+.label-marg-left {
+	margin-left: 75px;
+}
+.label-marg-right {
+	margin-right: 75px;
+}
+textarea {
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	border-bottom: 1px solid white;
+	background-color: var(--color-black);
+	width: 75%;
+	margin-bottom: 35px;
+}
+::placeholder {
+	font-size: 1.5em;
+}
+.full-input-first {
+	width: 50%;
+}
+.full-input-scd {
+	width: 68%;
+}
+.btn-contact {
+	padding: 1em 3.3em;
+	background: var(--color-accent);
+	color: var(--color-white);
+	border: 0;
+	font-size: 1.2em;
+	font-weight: 800;
+	font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+}
+.div-contact-button {
+	margin-bottom: 60px;
+	width: 40%;
+	margin-inline: auto;
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+}
+.div-contact-button > a > img {
+	width: 45px;
 }
 /* Footer */
 footer {

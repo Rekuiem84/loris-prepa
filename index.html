@@ -10,32 +10,34 @@
   <link rel='stylesheet' href='style.css' />
   <link rel='shortcut icon' type='image/png' href='images/logo.svg' />
   <!-- <script src='' defer></script> -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
 </head>
 
 <body>
   <header>
     <nav>
-      <div class="logo-cont"><a href="#"><img src="images/logo.svg" alt="logo"></a></div>
+      <div class="logo-cont"><a href="index.html"><img src="images/logo.svg" alt="logo"></a></div>
       <ul class="nav__list">
-        <li class="underline"><a href="index.html">Accueil</a></li>
+        <li class="underline"><a href="#">Accueil</a></li>
         <li><a href="histoire.html">Histoire</a></li>
         <li><a href="reserver.html">Réserver</a></li>
-        <li><a href="#">Me&nbsp;contacter</a></li>
+        <li><a href="contact.html">Me&nbsp;contacter</a></li>
       </ul>
     </nav>
   </header>
   <main>
+    <!-- Début de widget de badge Calendly -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script
+      type="text/javascript">window.onload = function () { Calendly.initBadgeWidget({ url: 'https://calendly.com/morinijoshua/prise-de-rdv', text: 'Planifier un RDV', color: '#022cd7', textColor: '#ffffff', branding: true }); }</script>
+    <!-- Fin de widget de badge Calendly -->
     <section class="hero-section--accueil">
       <div>
         <p class="main-title"><span>Optimiser.</span><br><span>Transformer.</span><br><span>Exceller.</span></p>
         <h1>Préparateur physique pour les athlètes ambitieux.</h1>
-        <a href="#" class="cta-button">Qui suis-je ?</a>
+        <a href="histoire.html" class="cta-button">Qui suis-je ?</a>
       </div>
-      <div class="img-cont"><img src="" alt="loris"></div>
+      <div class="img-cont"><img src="images/hero-image.webp" alt="loris"></div>
     </section>
     <section class="qui-suis-je">
       <div class="timeline bg-accent">
@@ -48,6 +50,10 @@
       </div>
       <div class="video-cont">
         <div class="logo-cont"><img src="images/logo.svg" alt="loris"></div>
+        <video muted autoplay loop class="bg-video">
+          <source src="images/video-fond.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas les vidéos.
+        </video>
         <h2>Qui suis-je ?</h2>
         <p>Salut 👋 Moi c'est Loris, votre architecte de performance sportive.</p>
         <p>Ancien préparateur des lionnes de l'UBB et maître nageur, je fusionne passion, patience et respect pour
@@ -125,10 +131,10 @@
       <div>
         <ul>
           <li>Pages</li>
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">Qui suis-je ?</a></li>
-          <li><a href="#">Réserver</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="histoire.html">Histoire</a></li>
+          <li><a href="reserver.html">Réserver</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
