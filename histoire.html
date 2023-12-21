@@ -9,7 +9,7 @@
   <meta name='description' content=''>
   <link rel='stylesheet' href='style.css' />
   <link rel='shortcut icon' type='image/png' href='images/logo.svg' />
-  <!-- <script src='' defer></script> -->
+  <script src='script.js' defer></script>
 </head>
 
 <body>
@@ -23,6 +23,9 @@
         <li><a href="contact.html">Me&nbsp;contacter</a></li>
       </ul>
     </nav>
+    <div class="burger-cont">
+      <div class="burger--line"></div>
+    </div>
   </header>
   <main>
     <section class="hero-section--histoire">
@@ -40,14 +43,16 @@
       type="text/javascript">window.onload = function () { Calendly.initBadgeWidget({ url: 'https://calendly.com/morinijoshua/prise-de-rdv', text: 'Planifier un RDV', color: '#022cd7', textColor: '#ffffff', branding: true }); }</script>
     <!-- Fin de widget de badge Calendly -->
     <section class="histoire" id="histoire">
-      <div class="timeline bg-accent">
-        <p>2023</p>
-        <p>2022</p>
-        <p>2021</p>
-        <p>2020</p>
-        <p>2019</p>
-        <p>2018</p>
-        <p>2017</p>
+      <div class="timeline">
+        <ul>
+          <li>2023</li>
+          <li>2022</li>
+          <li>2021</li>
+          <li>2020</li>
+          <li>2019</li>
+          <li>2018</li>
+          <li>2017</li>
+        </ul>
       </div>
       <article class="histoire-article">
         <div class="main-cont">
@@ -58,7 +63,7 @@
         </div>
         <div class="content-cont">
           <!-- <p class="color-accent">Aujourd'hui</p> -->
-          <p class="color-accent">Aujourd'hui - Juillet <span class="date">2022</span></p>
+          <p class="color-accent" tabindex="0">Aujourd'hui - Juillet <span class="date">2022</span></p>
           <p>Lorem ipsum dolor sit amet consectetur. Risus amet netus pellentesque tincidunt. Fusce enim pellentesque
             aenean pellentesque laoreet aenean convallis aliquet. Odio erat id netus id odio. Aliquam nulla viverra
             ligula iaculis risus porttitor.</p>
@@ -66,7 +71,8 @@
       </article>
       <article class="histoire-article--reverse">
         <div class="content-cont">
-          <p class="color-accent">Septembre <span class="date">2022</span> - <span class="date">2020</span></p>
+          <p class="color-accent" tabindex="0">Septembre <span class="date">2022</span> - <span class="date">2020</span>
+          </p>
           <!-- <p class="color-accent"><span class="date">2020</span></p> -->
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque facilis tempore est dignissimos dolorum
             quaerat soluta accusamus tenetur molestiae placeat necessitatibus autem laudantium doloremque, officiis
@@ -88,7 +94,8 @@
           </div>
         </div>
         <div class="content-cont">
-          <p class="color-accent">Septembre <span class="date">2020</span> - <span class="date">2018</span></p>
+          <p class="color-accent" tabindex="0">Septembre <span class="date">2020</span> - <span class="date">2018</span>
+          </p>
           <!-- <p class="color-accent"><span class="date">2018</span></p> -->
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque facilis tempore est dignissimos dolorum
             quaerat soluta accusamus tenetur molestiae placeat necessitatibus autem laudantium doloremque, officiis
@@ -98,7 +105,8 @@
       </article>
       <article class="histoire-article--reverse">
         <div class="content-cont">
-          <p class="color-accent">Juillet <span class="date">2018</span> - Août <span class="date">2017</span></p>
+          <p class="color-accent" tabindex="0">Juillet <span class="date">2018</span> - Août <span
+              class="date">2017</span></p>
           <!-- <p class="color-accent">Août <span class="date">2017</span></p> -->
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque facilis tempore est dignissimos dolorum
             quaerat soluta accusamus tenetur molestiae placeat necessitatibus autem laudantium doloremque, officiis

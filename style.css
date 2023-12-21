@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
 @font-face {
 	font-family: "Unison";
 	font-style: normal;
@@ -22,8 +24,6 @@
 	font-weight: 700;
 	src: url("../fonts/unison-pro/Unison-Pro-Light-Italic.otf");
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
 	--color-black: #1f1f21;
@@ -52,7 +52,6 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	font-family: sans-serif;
 	background: var(--color-black);
 	overflow-x: hidden;
 	font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
@@ -112,7 +111,7 @@ nav a {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	font-size: var(--font-size-small);
+	font-size: 1.125rem;
 	gap: 3em;
 
 	& a {
@@ -123,6 +122,73 @@ nav a {
 		padding: 0.9em 2.4em;
 		background: var(--color-accent);
 		color: var(--color-white);
+	}
+}
+@media screen and (max-width: 1000px) {
+	.nav__list {
+		background-color: var(--color-black);
+		position: absolute;
+		padding: 2em 0;
+		gap: 3em;
+		top: 92px;
+		right: 0;
+		transform: translateX(calc(100% + 6px));
+		flex-direction: column;
+		transition: 0.3s ease;
+		outline: 3px solid var(--color-white);
+
+		&.open {
+			transform: translateX(0);
+		}
+	}
+	.burger-cont {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		width: 60px;
+		aspect-ratio: 1;
+		padding: 8px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 8px;
+		cursor: pointer;
+		z-index: 100;
+	}
+	.burger--line {
+		height: 5px;
+		width: 100%;
+		background-color: var(--color-white);
+		border-radius: 50px;
+		position: relative;
+		transition: 0.5s, background-color 0.25s;
+	}
+	.burger--line::before,
+	.burger--line::after {
+		content: "";
+		position: absolute;
+		width: inherit;
+		height: inherit;
+		border-radius: inherit;
+		background-color: var(--color-white);
+		transition: 0.3s;
+	}
+	.burger--line::before {
+		top: -12px;
+	}
+	.burger--line::after {
+		top: 12px;
+	}
+	.burger-cont.open .burger--line {
+		background-color: transparent;
+	}
+	.burger-cont.open .burger--line::before {
+		top: 0;
+		rotate: -45deg;
+	}
+	.burger-cont.open .burger--line::after {
+		top: 0;
+		rotate: 45deg;
 	}
 }
 /* Accueil */
@@ -292,7 +358,7 @@ nav a {
 	flex-direction: column;
 	text-align: center;
 
-	& .timeline {
+	& .marquee {
 		min-width: 200vw;
 		display: flex;
 		justify-content: space-around;
@@ -309,6 +375,9 @@ nav a {
 			padding-inline: 0.5em;
 		}
 	}
+}
+.marquee img {
+	width: 90px;
 }
 @keyframes bandeauAnimation {
 	to {
@@ -393,8 +462,8 @@ nav a {
 		text-align: center;
 		text-transform: uppercase;
 		font-weight: 900;
-		line-height: 0.9;
-		line-height: 1cap;
+		line-height: 1;
+		margin-bottom: -0.13em;
 	}
 }
 .coaching .lists-cont {
@@ -436,6 +505,7 @@ nav a {
 		background-color: var(--color-white);
 		display: block;
 		width: fit-content;
+		text-align: center;
 		margin-inline: auto;
 		font-size: 1.2rem;
 		font-weight: 800;
@@ -554,12 +624,17 @@ nav a {
 	position: sticky;
 	top: 0;
 	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	font-size: 1.5rem;
-	font-weight: 600;
-	padding-block: 1.12em;
+
+	& ul {
+		background-color: var(--color-accent);
+		padding-block: 1.12em;
+		position: relative;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
 }
 .histoire article {
 	background-size: cover;
@@ -602,6 +677,7 @@ nav a {
 		font-weight: 900;
 		text-transform: uppercase;
 		line-height: 1.2;
+		outline: none;
 
 		& .date {
 			text-decoration: underline;
@@ -808,11 +884,15 @@ footer {
 	font-weight: 500;
 }
 .footer-main ul li:nth-child(n + 2) {
-	opacity: 0.7;
 	margin-top: 1.4em;
 
-	&:is(:hover, :focus-visible) {
-		opacity: 1;
+	& a {
+		opacity: 0.7;
+
+		&:is(:hover, :focus-visible) {
+			opacity: 1;
+			outline: none;
+		}
 	}
 }
 .footer-legal {
