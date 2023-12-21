@@ -208,6 +208,14 @@ nav .logo-cont {
 .nav--relative {
 	position: relative;
 }
+nav a {
+	outline: 3px solid transparent;
+	transition: 0.1s ease;
+
+	&:focus-visible {
+		outline-color: var(--color-white);
+	}
+}
 .nav__list {
 	display: flex;
 	justify-content: space-evenly;
@@ -272,15 +280,57 @@ nav .logo-cont {
 
 		&:is(:hover, :focus-visible) {
 			outline-offset: 6px;
+			color: var(--color-white);
+			text-decoration: underline;
 		}
 	}
 	& .img-cont {
 		z-index: 0;
 		position: absolute;
-		right: 10%;
+		right: 15%;
 		bottom: 0;
 		width: min(80%, 520px);
 	}
+}
+.style-element {
+	position: absolute;
+	z-index: -1;
+}
+#accueil-item-1 {
+	bottom: 0;
+	left: 0;
+	/* border: 3px solid red; */
+	width: min(220px, 70%);
+}
+#accueil-item-2 {
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-35%);
+	/* border: 3px solid gold; */
+	height: 100%;
+	width: min(600px, 50%);
+	/* border: 3px solid red; */
+	object-fit: contain;
+	object-position: top;
+}
+#accueil-item-3 {
+	bottom: 20%;
+	right: 55%;
+	/* border: 3px solid greenyellow; */
+	width: min(130px, 30%);
+}
+#accueil-item-4 {
+	top: 30%;
+	right: 10%;
+	/* border: 3px solid cyan; */
+	width: min(130px, 30%);
+}
+#accueil-item-5 {
+	bottom: 5%;
+	right: 5%;
+	/* border: 3px solid white; */
+	width: min(80px, 30%);
+	rotate: 180deg;
 }
 /* Histoire */
 .hero-section--histoire {
@@ -348,20 +398,31 @@ nav .logo-cont {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	text-align: center;
 
 	& .timeline {
-		width: 100%;
+		min-width: 200%;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
 		font-size: 1.5rem;
 		font-weight: 600;
-		padding-block: 1.12em;
+		padding-block: 1.1em;
+		gap: 2em;
 		text-transform: uppercase;
+		animation: bandeauAnimation 10s linear infinite;
+
+		& li {
+			text-wrap: nowrap;
+		}
 	}
 }
+@keyframes bandeauAnimation {
+	to {
+		transform: translateX(-50%);
+	}
+}
+
 .qui-suis-je video {
 	position: absolute;
 	min-width: 100%;
@@ -412,7 +473,9 @@ nav .logo-cont {
 		transition: 0.2s ease;
 
 		&:is(:hover, :focus-visible) {
-			outline-offset: 6px;
+			background-color: var(--color-white);
+			color: var(--color-accent);
+			outline: none;
 		}
 		&::before {
 			content: "Pour aller plus loin";
@@ -424,6 +487,7 @@ nav .logo-cont {
 			font-weight: 200;
 			text-transform: uppercase;
 			pointer-events: none;
+			color: var(--color-white);
 		}
 	}
 }
