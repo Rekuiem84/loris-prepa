@@ -799,6 +799,7 @@ nav a {
 	& textarea {
 		width: min(100%, 73.25ch);
 		margin-bottom: 2rem;
+		resize: vertical;
 	}
 	& .contact-button {
 		display: flex;
